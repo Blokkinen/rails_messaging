@@ -26,7 +26,7 @@ group :development, :test do
    gem 'database_cleaner'
    gem 'rspec-rails'
    gem 'shoulda-matchers'
-   gem 'factor'
+   gem 'factory_girl_rails'
  end
 
 group :production do
