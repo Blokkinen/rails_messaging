@@ -28,7 +28,9 @@ group :development, :test do
   gem 'factory_girl_rails'
   gem 'pry'
   gem 'pry-byebug'
+  gem 'launchy'
 end
+
 
 group :production do
   gem 'rails_12factor'

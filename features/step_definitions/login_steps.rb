@@ -22,8 +22,8 @@ Then(/^I should be redirected to the index page$/) do
   expect(current_path).to eq root_path
 end
 
-Then(/^I should see "([^"]*)"$/) do |flash|
-  expect(page).to have_content('Signed in successfully.')
+Then(/^I should see "([^"]*)"$/) do |text|
+  expect(page).to have_content(text)
 end
 
 Given(/^the following user exist:$/) do |table|
