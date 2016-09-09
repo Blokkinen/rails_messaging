@@ -9,7 +9,7 @@ I should be able to log out
         | placeholder@craftacademy.com  | hackerss | def  |
 
   Scenario:
-    Given I am logged in as a user
+    Given I am logged in as "abc"
     And I am on the index page
-    And I click the "logout" link
-    Then I should be logged out
+    And I click the "Logout" link
+    Then I log out

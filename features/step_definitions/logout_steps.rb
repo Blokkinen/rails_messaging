@@ -4,19 +4,19 @@ Given(/^the following user exist:$/) do |table|
   end
 end
 
-Given(/^I am logged in as a user$/) do
-  @current_user = User.create!(:email => 'user@craftacademy.com', :password => 'bajskorv')
-  login_as(@current_user)
+Given(/^I am logged in as "([^"]*)"$/) do |name|
+  user = User.find_by(name: name)
+  login_as(user, scope: :user)
 end
 
 Given(/^I am on the index page$/) do
-  pending # Write code here that turns the phrase above into concrete actions
+  visit root_path
 end
 
-Given(/^I click the "([^"]*)" link$/) do |arg1|
-  pending # Write code here that turns the phrase above into concrete actions
+Given(/^I click the "([^"]*)" link$/) do |link|
+  click_link(link)
 end
 
-Then(/^I should be logged out$/) do
-
+Then(/^I log out$/) do
+  logout
 end
