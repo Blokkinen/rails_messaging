@@ -12,4 +12,4 @@ I should be able to log out
     Given I am logged in as "abc"
     And I am on the index page
     And I click the "Logout" link
-    Then I log out
+    And I should see "Signed out successfully."

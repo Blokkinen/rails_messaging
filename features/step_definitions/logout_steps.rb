@@ -7,10 +7,10 @@ Given(/^I am on the index page$/) do
   visit root_path
 end
 
-Given(/^I click the "([^"]*)" link$/) do |link|
-  click_link(link)
+Then(/^show me the page$/) do
+  save_and_open_page
 end
 
-Then(/^I log out$/) do
-  logout
+Given(/^I click the "([^"]*)" link$/) do |link|
+  click_link(link)
 end
